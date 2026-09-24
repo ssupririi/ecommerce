@@ -287,17 +287,25 @@ th {
         margin: 15px auto;
     }
 
-    #product-spec-table {
+    #product-spec-table,
+    section table {
         display: table !important;
-        width: 100% !important;
+        width: 92% !important;
         max-width: 100% !important;
         margin: 20px auto !important;
         white-space: normal !important;
+        box-sizing: border-box;
     }
 
     th, td {
-        padding: 8px 10px;
-        font-size: 13px;
+        padding: 8px 6px;
+        font-size: 12px;
+        word-break: break-word;
+        text-align: left;
+    }
+
+    th {
+        text-align: center;
     }
 
     .product-img {
