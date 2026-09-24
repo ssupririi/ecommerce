@@ -1,4 +1,3 @@
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -37,6 +36,7 @@ th {
 
 #product-spec-table {
     width: 70%;
+    margin: 20px auto;
 }
 
 #main-nav {
@@ -74,7 +74,6 @@ th {
     color: #E0AFA0;
 }
 
-/* Content Elements */
 .section-title {
     text-align: center;
     color: #463F3A;
@@ -233,7 +232,6 @@ th {
 }
 
 @media screen and (max-width: 640px) {
-    /* Navigation: Stack vertically on small screens */
     #main-nav {
         flex-direction: column;
         gap: 12px;
@@ -289,14 +287,17 @@ th {
         margin: 15px auto;
     }
 
+    #product-spec-table {
+        display: table !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 20px auto !important;
+        white-space: normal !important;
+    }
+
     th, td {
         padding: 8px 10px;
         font-size: 13px;
-    }
-
-    #product-spec-table {
-        width: 95%;
-        white-space: normal; 
     }
 
     .product-img {
