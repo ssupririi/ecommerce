@@ -113,6 +113,7 @@ th {
     font-weight: bold;
     font-size: 13px;
     transition: background-color 0.2s ease;
+    white-space: nowrap;
 }
 
 .btn-action:hover {
@@ -279,32 +280,40 @@ th {
         height: 60px;
     }
 
+    /* Standard tables (Product Catalog & Bestsellers) scroll horizontally */
     table {
-        display: block;
-        width: 95%;
-        overflow-x: auto;
-        white-space: nowrap;
-        margin: 15px auto;
+        display: block !important;
+        width: 92% !important;
+        overflow-x: auto !important;
+        white-space: nowrap !important;
+        margin: 15px auto !important;
+        -webkit-overflow-scrolling: touch;
     }
 
+    /* 2-column info tables stay fully visible without scrolling */
     #product-spec-table,
-    section table {
+    section table:not(:has(th:nth-child(3))) {
         display: table !important;
         width: 92% !important;
         max-width: 100% !important;
         margin: 20px auto !important;
         white-space: normal !important;
-        box-sizing: border-box;
     }
 
     th, td {
         padding: 8px 6px;
         font-size: 12px;
+        word-break: normal;
+    }
+
+    #product-spec-table td,
+    section table:not(:has(th:nth-child(3))) td {
         word-break: break-word;
         text-align: left;
     }
 
-    th {
+    #product-spec-table th,
+    section table:not(:has(th:nth-child(3))) th {
         text-align: center;
     }
 
